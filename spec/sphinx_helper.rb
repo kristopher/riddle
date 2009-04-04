@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'mysql'
 require 'erb'
 require 'yaml'
@@ -38,7 +39,6 @@ class SphinxHelper
         server.query line
       end
     }
-
     server.close
   end
   

@@ -107,6 +107,10 @@ module Riddle
         @html_remove_element_tags = nil_split html_remove_elements, /,\s?/
       end
       
+      def enable_star
+        (@enable_star == true && 1) || (@enable_star == false && 0) || @enable_star
+      end
+      
       def render
         raise ConfigurationError, "#{@name} #{@sources.inspect} #{@path} #{@parent}" unless valid?
         
